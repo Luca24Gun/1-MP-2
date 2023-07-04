@@ -1,0 +1,404 @@
+/* Les typographies */
+
+@font-face {
+    font-family: honeypils;
+    src: url('/fonts/HoneyPils-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: tabardo;
+    src: url('/fonts/Tabardo-font-FFP.otf') format('truetype');
+}
+
+/* Fin typographie */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    cursor: none;
+}
+
+/* Class communes */
+
+.d-flex{
+    display: flex;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-end{
+    justify-content: end;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.text-end{
+    text-align: end;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-70{
+    width: 70%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.w-30{
+    width: 30%;
+}
+
+.h-500{
+    height: 500px;
+}
+
+.h-750{
+    height: 750px;
+}
+
+.h-50{
+    height: 50%;
+}
+
+.h-100{
+    height: 100%;
+}
+
+.m-10{
+    margin: 0px 10px;
+}
+
+.m-l{
+    margin-left: 25px;
+}
+
+.p-10{
+    margin: 30px 30px;
+    padding: 10px 10px 0px 10px;
+}
+
+.maj{
+    text-transform: uppercase;
+}
+
+.yellow{
+    color: #ffc700;
+}
+
+.brown{
+    color: #503500;
+}
+
+.background-yellow{
+    background-color: #ffc700;
+}
+
+.background-brown{
+    background-color: #503500;
+}
+
+.honeypils{
+    font-family: honeypils;
+}
+
+.tabardo{
+    font-family: tabardo;
+}
+
+.button1{
+    font-family: tabardo;
+    color: #503500;
+    background-color: #ffc700;
+    padding: 8px 5px;
+    border-radius: 15px;
+    list-style: none;
+}
+
+.paragraphe{
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.alph{
+    border: 2px solid #503500;
+    border-radius: 10px;
+}
+
+.relative{
+    position: relative;
+}
+
+/* Fin class communes */
+
+/* Header */
+
+header{
+    background-color: #503500;
+    height: 80px;
+    padding: 0px 30px;
+}
+
+.logo{
+    width: 70px;
+}
+
+a{
+    list-style: none;
+    text-decoration: none;
+    color: #503500;
+}
+
+/* Fin header */
+
+/* Cursor */
+
+.cursor { 
+    position: fixed; 
+    border-radius: 50%; 
+    transform: translateX(-50%)translateY(-50%);
+    background: rgb(255,143,0);
+    background: radial-gradient(circle, rgba(255,143,0,0.9626225490196079) 1%, #FFC700 100%);
+    border: 2px solid #FF3C00;
+    z-index: 10; 
+    border: none; 
+    height: 40px;
+    width: 40px; 
+    transition: all  ease-out;
+    pointer-events: none;
+    cursor: none;
+  }
+  
+/* Fin cursor */
+
+/* Section 1 */
+
+#homepage{
+    height: 500px;
+    background-image: url(img/Dall-e_tireuse_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 35%;
+}
+
+#title{
+    background-color: #503500;
+    color: #ffc700;
+    font-family: honeypils;
+    font-size: 70px;
+    padding: 30px 30px 10px 30px;
+    border-radius: 20px 0px 0px 20px;
+    letter-spacing: 3px;
+}
+
+/* Fin section 1 */
+
+/* Section 2 */
+
+#typo{
+    padding: 2% 5%;
+    font-family: tabardo;
+}
+
+/* Fin section 2 */
+
+/* Entre section apparaisant que sur mobile */
+
+#mobile-img{
+    display: none;
+}
+
+/* Section 3 */
+
+#biere{
+    padding: 2% 5%;
+    font-family: tabardo;
+}
+
+#ddd{
+    background-color: #503500;
+    background-image: url(img/Ico_Onglet.png);
+    background-repeat: no-repeat;
+    background-position: right -260px bottom 50%;
+}
+
+model-viewer{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 80%;
+    height: 80%;
+}
+
+model-viewer:hover ~ .cursor{
+    display: none;
+    
+}
+
+/* Fin section 3 */
+
+/* Section 4 */
+
+#scroll{
+    overflow: scroll;
+}
+
+#scroll::-webkit-scrollbar{
+    display: none;
+}
+
+#set{
+    font-size: 40px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+#set li:hover{
+    border: 2px solid #503500;
+    border-radius: 20px;
+}
+
+#demo{
+    font-size: 300px;
+    margin-top: 15%;
+    margin-left: 27%;
+
+}
+/* Section 4 */
+
+/* Section 5 */
+
+hr{
+    border: 2px solid #503500;
+}
+
+
+/* Responsive mobile */
+
+@media screen and (max-width: 850px){
+
+    /* header */
+
+    header div{
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #menu{
+        display: none;
+    }
+
+    /* section 1 */
+
+    #homepage{
+        background-color: #503500;
+        height: 100%;
+    }
+
+    #title{
+        width: 100%;
+        height: 100%;
+        font-size: 40px;
+        text-align: center;
+        border-radius: 0px;
+    }
+
+
+    /* entre section 2 et 3 apparaissant que sur mobile */
+
+    #mobile-img{
+        display: block;
+        background-color: #503500;
+    }
+
+    #mobile-img img{
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
+    /* section 3 */
+
+    #ddd{
+        display: none;
+    }
+
+    #biere{
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    #text-biere{
+        flex-direction: column;
+    }
+
+    .m-l{
+        margin-left: 0px;
+    }
+
+    /* section 4 */
+
+    #set-part{
+        height: 1300px;
+    }
+
+    #scene{
+        display: none;
+    }
+
+    #scroll{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* footer */
+
+    footer{
+        flex-direction: column;
+    }
+
+    #contact{
+        text-align: start;
+        justify-content: start;
+    }
+
+    #social{
+        justify-content: start;
+    }
+}
